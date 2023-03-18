@@ -1,0 +1,359 @@
+create database beerstore;
+use beerstore;
+create table pais (
+   id_pais smallint,
+   nombrepais varchar (50),
+   Primary key  (id_pais)
+);
+
+create table cerveza (
+  id_cerveza smallint,
+  nombre_cerveza varchar (50),
+  id_pais smallint,
+  precio mediumint,
+   primary key  (id_cerveza),
+   foreign key  (id_pais) references pais (id_pais) 
+);
+
+create table tipoCategoria  (
+  id_tipocategoria tinyint,
+  nombretipocategoria varchar (20),
+  descripcion varchar(200),
+  primary key  (id_tipocategoria)
+);
+
+create table categoria  (
+  id_categoria smallint,
+  nombrecategoria varchar (50),
+  descripcion varchar (200),
+  primary key  (id_categoria)
+  
+);
+
+create table categoria_tipocategoria  (
+  id_categoria smallint,
+  id_tipocategoria tinyint,
+  foreign key  (id_categoria) references categoria (id_categoria),
+  foreign key  (id_tipocategoria) references tipocategoria (id_tipocategoria)
+
+);
+
+
+create table materiaprima  (
+   id_componente smallint,
+   nombrecomponente varchar (100),
+   cantidadcomponente varchar (100),
+   primary key (id_componente)
+);
+
+create table tipocomponente (
+  id_tipocomponente smallint,
+  nombretipocomponente varchar (50),
+  medida  varchar (50),
+  primary key (id_tipocomponente)
+);
+
+
+create table materiaprima_tipocomponente (
+  id_componente smallint,
+  id_tipocomponente smallint,
+  foreign key (id_componente) references materiaprima (id_componente),
+  foreign key (id_tipocomponente) references tipocomponente (id_tipocomponente)
+);
+
+create table cerveza_materiaprima (
+  id_componente smallint,
+  id_cerveza smallint,
+  foreign key  (id_cerveza) references cerveza (id_cerveza),
+  foreign key  (id_componente) references materiaprima (id_componente)
+);
+
+create table cerveza_categoria (
+  id_cerveza smallint,
+  id_categoria smallint,
+  foreign key  (id_cerveza) references cerveza (id_cerveza),
+  foreign key (id_categoria) references categoria (id_categoria)
+);
+
+
+  */*/*/*/*/*/*/*/*/    Insertar datos */*/*/*/*/*/*/*
+
+
+insert into pais  values (1,'Afganistán');
+insert into pais  values (2,'Albania');
+insert into pais  values (3,'Alemania');
+insert into pais  values (4,'Andorra');
+insert into pais  values (5,'Angola');
+insert into pais  values (6,'Antigua y Barbuda');
+insert into pais  values (7,'Arabia Saudita');
+insert into pais  values (8,'Argelia');
+insert into pais  values (9,'Argentina');
+insert into pais  values (10,'Armenia');
+insert into pais  values (11,'Australia');
+insert into pais  values (12,'Austria');
+insert into pais  values (13,'Azerbaiyán');
+insert into pais  values (14,'Bahamas');
+insert into pais  values (15,'Bangladés');
+insert into pais  values (16,'Barbados');
+insert into pais  values (17,'Baréin');
+insert into pais  values (18,'Bélgica');
+insert into pais  values (19,'Belice');
+insert into pais  values (20,'Benín');
+insert into pais  values (21,'Bielorrusia');
+insert into pais  values (22,'Birmania/Myanmar');
+insert into pais  values (23,'Bolivia');
+insert into pais  values (24,'Bosnia y Herzegovina');
+insert into pais  values (25,'Botsuana');
+insert into pais  values (26,'Brasil');
+insert into pais  values (27,'Brunéi');
+insert into pais  values (28,'Bulgaria');
+insert into pais  values (29,'Burkina Faso');
+insert into pais  values (30,'Burundi');
+insert into pais  values (31,'Bután');
+insert into pais  values (32,'Cabo Verde');
+insert into pais  values (33,'Camboya');
+insert into pais  values (34,'Camerún');
+insert into pais  values (35,'Canadá');
+insert into pais  values (36,'Catar');
+insert into pais  values (37,'Chad');
+insert into pais  values (38,'Chile');
+insert into pais  values (39,'China');
+insert into pais  values (40,'Chipre');
+insert into pais  values (41,'Ciudad del Vaticano');
+insert into pais  values (42,'Colombia');
+insert into pais  values (43,'Comoras');
+insert into pais  values (44,'Corea del Norte');
+insert into pais  values (45,'Corea del Sur');
+insert into pais  values (46,'Costa de Marfil');
+insert into pais  values (47,'Costa Rica');
+insert into pais  values (48,'Croacia');
+insert into pais  values (49,'Cuba');
+insert into pais  values (50,'Dinamarca');
+insert into pais  values (51,'Dominica');
+insert into pais  values (52,'Ecuador');
+insert into pais  values (53,'Egipto');
+insert into pais  values (54,'El Salvador');
+insert into pais  values (55,'Emiratos Árabes Unidos');
+insert into pais  values (56,'Eritrea');
+insert into pais  values (57,'Eslovaquia');
+insert into pais  values (58,'Eslovenia');
+insert into pais  values (59,'España');
+insert into pais  values (60,'Estados Unidos');
+insert into pais  values (61,'Estonia');
+insert into pais  values (62,'Etiopía');
+insert into pais  values (63,'Filipinas');
+insert into pais  values (64,'Finlandia');
+insert into pais  values (65,'Fiyi');
+insert into pais  values (66,'Francia');
+insert into pais  values (67,'Gabón');
+insert into pais  values (68,'Gambia');
+insert into pais  values (69,'Georgia');
+insert into pais  values (70,'Ghana');
+insert into pais  values (71,'Granada');
+insert into pais  values (72,'Grecia');
+insert into pais  values (73,'Guatemala');
+insert into pais  values (74,'Guyana');
+insert into pais  values (75,'Guinea');
+insert into pais  values (76,'Guinea-Bisáu');
+insert into pais  values (77,'Guinea Ecuatorial');
+insert into pais  values (78,'Haití');
+insert into pais  values (79,'Honduras');
+insert into pais  values (80,'Hungría');
+insert into pais  values (81,'India');
+insert into pais  values (82,'Indonesia');
+insert into pais  values (83,'Irak');
+insert into pais  values (84,'Irán');
+insert into pais  values (85,'Irlanda');
+insert into pais  values (86,'Islandia');
+insert into pais  values (87,'Islas Marshall');
+insert into pais  values (88,'Islas Salomón');
+insert into pais  values (89,'Israel');
+insert into pais  values (90,'Italia');
+insert into pais  values (91,'Jamaica');
+insert into pais  values (92,'Japón');
+insert into pais  values (93,'Jordania');
+insert into pais  values (94,'Kazajistán');
+insert into pais  values (95,'Kenia');
+insert into pais  values (96,'Kirguistán');
+insert into pais  values (97,'Kiribati');
+insert into pais  values (98,'Kuwait');
+insert into pais  values (99,'Laos');
+insert into pais  values (100,'Lesoto');
+insert into pais  values (101,'Letonia');
+insert into pais  values (102,'Líbano');
+insert into pais  values (103,'Liberia');
+insert into pais  values (104,'Libia');
+insert into pais  values (105,'Liechtenstein');
+insert into pais  values (106,'Lituania');
+insert into pais  values (107,'Luxemburgo');
+insert into pais  values (108,'Macedonia del Norte');
+insert into pais  values (109,'Madagascar');
+insert into pais  values (110,'Malasia');
+insert into pais  values (111,'Malaui');
+insert into pais  values (112,'Maldivas');
+insert into pais  values (113,'Malí');
+insert into pais  values (114,'Malta');
+insert into pais  values (115,'Marruecos');
+insert into pais  values (116,'Mauricio');
+insert into pais  values (117,'Mauritania');
+insert into pais  values (118,'México');
+insert into pais  values (119,'Micronesia');
+insert into pais  values (120,'Moldavia');
+insert into pais  values (121,'Mónaco');
+insert into pais  values (122,'Mongolia');
+insert into pais  values (123,'Montenegro');
+insert into pais  values (124,'Mozambique');
+insert into pais  values (125,'Namibia');
+insert into pais  values (126,'Nauru');
+insert into pais  values (127,'Nepal');
+insert into pais  values (128,'Nicaragua');
+insert into pais  values (129,'Níger');
+insert into pais  values (130,'Nigeria');
+insert into pais  values (131,'Noruega');
+insert into pais  values (132,'Nueva Zelanda');
+insert into pais  values (133,'Omán');
+insert into pais  values (134,'Países Bajos');
+insert into pais  values (135,'Pakistán');
+insert into pais  values (136,'Palaos');
+insert into pais  values (137,'Panamá');
+insert into pais  values (138,'Papúa Nueva Guinea');
+insert into pais  values (139,'Paraguay');
+insert into pais  values (140,'Perú');
+insert into pais  values (141,'Polonia');
+insert into pais  values (142,'Portugal');
+insert into pais  values (143,'Reino Unido de Gran Bretaña e Irlanda del Norte');
+insert into pais  values (144,'República Centroafricana');
+insert into pais  values (145,'República Checa');
+insert into pais  values (146,'República del Congo');
+insert into pais  values (147,'República Democrática del Congo');
+insert into pais  values (148,'República Dominicana');
+insert into pais  values (149,'República Sudafricana');
+insert into pais  values (150,'Ruanda');
+insert into pais  values (151,'Rumanía');
+insert into pais  values (152,'Rusia');
+insert into pais  values (153,'Samoa');
+insert into pais  values (154,'San Cristóbal y Nieves');
+insert into pais  values (155,'San Marino');
+insert into pais  values (156,'San Vicente y las Granadinas');
+insert into pais  values (157,'Santa Lucía');
+insert into pais  values (158,'Santo Tomé y Príncipe');
+insert into pais  values (159,'Senegal');
+insert into pais  values (160,'Serbia');
+insert into pais  values (161,'Seychelles');
+insert into pais  values (162,'Sierra Leona');
+insert into pais  values (163,'Singapur');
+insert into pais  values (164,'Siria');
+insert into pais  values (165,'Somalia');
+insert into pais  values (166,'Sri Lanka');
+insert into pais  values (167,'Suazilandia');
+insert into pais  values (168,'Sudán');
+insert into pais  values (169,'Sudán del Sur');
+insert into pais  values (170,'Suecia');
+insert into pais  values (171,'Suiza');
+insert into pais  values (172,'Surinam');
+insert into pais  values (173,'Tailandia');
+insert into pais  values (174,'Tanzania');
+insert into pais  values (175,'Tayikistán');
+insert into pais  values (176,'Timor Oriental');
+insert into pais  values (177,'Togo');
+insert into pais  values (178,'Tonga');
+insert into pais  values (179,'Trinidad y Tobago');
+insert into pais  values (180,'Túnez');
+insert into pais  values (181,'Turkmenistán');
+insert into pais  values (182,'Turquía');
+insert into pais  values (183,'Tuvalu');
+insert into pais  values (184,'Ucrania');
+insert into pais  values (185,'Uganda');
+insert into pais  values (186,'Uruguay');
+insert into pais  values (187,'Uzbekistán');
+insert into pais  values (188,'Vanuatu');
+insert into pais  values (189,'Venezuela');
+insert into pais  values (190,'Vietnam');
+insert into pais  values (191,'Yemen');
+insert into pais  values (192,'Yibuti');
+insert into pais  values (193,'Zambia');
+insert into pais  values (194,'Zimbabue');
+insert into pais  values (195,'Zambia');
+insert into pais  values (196,'Zimbabue');
+
+
+insert into tipocategoria values  (1,'Dark','Cerveza oscura dulce');
+insert into tipocategoria values  (2,'Pale','Cerveza bien clara y espumosa');
+insert into tipocategoria values  (3,'Backs','Cerveza agridulce fuerte');
+insert into tipocategoria values  (4,'Stouts','Cerveza a base de malta menos fuerte que la porter');
+insert into tipocategoria values  (5,'Porters','Cerveza a base de malta muy fuerte ');
+insert into tipocategoria values  (6,'Belgians','Cerveza mixta trigo y especies cítricas');
+insert into tipocategoria values  (7,'Sours','Cerveza de sabor ácido');
+
+
+Insert into categoria values  (1,'Larges','Se definen por el tipo de levadura usada durante la fermentación.');
+Insert into categoria values  (2,'Ales','Abarca a todas las cervezas de fermentación alta');
+
+insert into categoria_tipocategoria values  (1,1);
+insert into categoria_tipocategoria values  (1,2);
+insert into categoria_tipocategoria values  (1,3);
+insert into categoria_tipocategoria values  (2,2);
+insert into categoria_tipocategoria values  (2,4);
+insert into categoria_tipocategoria values  (2,5);
+insert into categoria_tipocategoria values  (2,6);
+insert into categoria_tipocategoria values  (2,7);
+
+
+1, Agua el ingrediente más presente
+2, Malta la esencia de la cerveza
+3, Lúpulo primo hermano de la marihuana
+4, Levadura la verdadera artífice de la cerveza
+5, Cereales sin maltear
+6, Casi cualquier ingrediente que se te pueda ocurrir
+
+insert into	materiaprima values(1,'Agua',300);
+insert into	materiaprima values(2,'Malta',15);
+insert into	materiaprima values(3,'Lúpulo',15);
+insert into	materiaprima values(4,'Levadura',10);
+insert into	materiaprima values(5,'Cereales',10);
+insert into	materiaprima values(6,'Agua destilada', 250);
+insert into	materiaprima values(7,'Malta de trigo',50);
+insert into	materiaprima values(8,'Malta de cebeda', 50);
+insert into	materiaprima values(9,'Malta de cereal', 50);
+
+
+insert into tipocomponente values (1,'Agua', 'ml');
+insert into tipocomponente values (2,'Malta','ml');
+insert into tipocomponente values (3,'Lúpulo','ml');
+insert into tipocomponente values (4,'Levadura','gr');
+insert into tipocomponente values (5,'Cereal', 'gr');
+
+
+insert into materiaprima_tipocomponente values (1,1);
+insert into materiaprima_tipocomponente values (2,2);
+insert into materiaprima_tipocomponente values (3,3);
+insert into materiaprima_tipocomponente values (4,4);
+insert into materiaprima_tipocomponente values (5,5);
+insert into materiaprima_tipocomponente values (6,1);
+insert into materiaprima_tipocomponente values (7,2);
+insert into materiaprima_tipocomponente values (8,2);
+insert into materiaprima_tipocomponente values (9,2);
+
+
+insert into cerveza values(1,'Aguila tradicional',42,1800);
+insert into cerveza values(2,'Aguila Light',42,2500);
+insert into cerveza values(3,'Poker',42,2500);
+insert into cerveza values(4,'Leona',42,2700);
+insert into cerveza values(5,'Heinecken',3,2800);
+insert into cerveza values(6,'Corona',118,2800);
+insert into cerveza values(7,'Corona Light',118,3200);
+
+insert into cerveza_categoria values (1,1);
+insert into cerveza_categoria values (2,2);
+insert into cerveza_categoria values (3,1);
+insert into cerveza_categoria values (4,2);
+insert into cerveza_categoria values (5,2);
+insert into cerveza_categoria values (6,2);
+insert into cerveza_categoria values (7,2);
+
+insert into cerveza_materiaprima values (1,1);
+insert into cerveza_materiaprima values (1,2);
+insert into cerveza_materiaprima values (1,3);
+insert into cerveza_materiaprima values (1,4);
+insert into cerveza_materiaprima values (1,5);
+
