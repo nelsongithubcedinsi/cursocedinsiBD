@@ -1,0 +1,373 @@
+use beerstore;
+db.createColletion("pais")
+db.pais.insert([{"_id":1, "nombrePais":"Afganistán"},
+{"_id":2, "nombrePais":"Albania"},
+{"_id":3, "nombrePais":"Alemania"},
+{"_id":4, "nombrePais":"Andorra"},
+{"_id":5, "nombrePais":"Angola"},
+{"_id":6, "nombrePais":"Antigua y Barbuda"},
+{"_id":7, "nombrePais":"Arabia Saudita"},
+{"_id":8, "nombrePais":"Argelia"},
+{"_id":9, "nombrePais":"Argentina"},
+{"_id":10, "nombrePais":"Armenia"},
+{"_id":11, "nombrePais":"Australia"},
+{"_id":12, "nombrePais":"Austria"},
+{"_id":13, "nombrePais":"Azerbaiyán"},
+{"_id":14, "nombrePais":"Bahamas"},
+{"_id":15, "nombrePais":"Bangladés"},
+{"_id":16, "nombrePais":"Barbados"},
+{"_id":17, "nombrePais":"Baréin"},
+{"_id":18, "nombrePais":"Bélgica"},
+{"_id":19, "nombrePais":"Belice"},
+{"_id":20, "nombrePais":"Benín"},
+{"_id":21, "nombrePais":"Bielorrusia"},
+{"_id":22, "nombrePais":"Birmania/Myanmar"},
+{"_id":23, "nombrePais":"Bolivia"},
+{"_id":24, "nombrePais":"Bosnia y Herzegovina"},
+{"_id":25, "nombrePais":"Botsuana"},
+{"_id":26, "nombrePais":"Brasil"},
+{"_id":27, "nombrePais":"Brunéi"},
+{"_id":28, "nombrePais":"Bulgaria"},
+{"_id":29, "nombrePais":"Burkina Faso"},
+{"_id":30, "nombrePais":"Burundi"},
+{"_id":31, "nombrePais":"Bután"},
+{"_id":32, "nombrePais":"Cabo Verde"},
+{"_id":33, "nombrePais":"Camboya"},
+{"_id":34, "nombrePais":"Camerún"},
+{"_id":35, "nombrePais":"Canadá"},
+{"_id":36, "nombrePais":"Catar"},
+{"_id":37, "nombrePais":"Chad"},
+{"_id":38, "nombrePais":"Chile"},
+{"_id":39, "nombrePais":"China"},
+{"_id":40, "nombrePais":"Chipre"},
+{"_id":41, "nombrePais":"Ciudad del Vaticano"},
+{"_id":42, "nombrePais":"Colombia"},
+{"_id":43, "nombrePais":"Comoras"},
+{"_id":44, "nombrePais":"Corea del Norte"},
+{"_id":45, "nombrePais":"Corea del Sur"},
+{"_id":46, "nombrePais":"Costa de Marfil"},
+{"_id":47, "nombrePais":"Costa Rica"},
+{"_id":48, "nombrePais":"Croacia"},
+{"_id":49, "nombrePais":"Cuba"},
+{"_id":50, "nombrePais":"Dinamarca"},
+{"_id":51, "nombrePais":"Dominica"},
+{"_id":52, "nombrePais":"Ecuador"},
+{"_id":53, "nombrePais":"Egipto"},
+{"_id":54, "nombrePais":"El Salvador"},
+{"_id":55, "nombrePais":"Emiratos Árabes Unidos"},
+{"_id":56, "nombrePais":"Eritrea"},
+{"_id":57, "nombrePais":"Eslovaquia"},
+{"_id":58, "nombrePais":"Eslovenia"},
+{"_id":59, "nombrePais":"España"},
+{"_id":60, "nombrePais":"Estados Unidos"},
+{"_id":61, "nombrePais":"Estonia"},
+{"_id":62, "nombrePais":"Etiopía"},
+{"_id":63, "nombrePais":"Filipinas"},
+{"_id":64, "nombrePais":"Finlandia"},
+{"_id":65, "nombrePais":"Fiyi"},
+{"_id":66, "nombrePais":"Francia"},
+{"_id":67, "nombrePais":"Gabón"},
+{"_id":68, "nombrePais":"Gambia"},
+{"_id":69, "nombrePais":"Georgia"},
+{"_id":70, "nombrePais":"Ghana"},
+{"_id":71, "nombrePais":"Granada"},
+{"_id":72, "nombrePais":"Grecia"},
+{"_id":73, "nombrePais":"Guatemala"},
+{"_id":74, "nombrePais":"Guyana"},
+{"_id":75, "nombrePais":"Guinea"},
+{"_id":76, "nombrePais":"Guinea-Bisáu"},
+{"_id":77, "nombrePais":"Guinea Ecuatorial"},
+{"_id":78, "nombrePais":"Haití"},
+{"_id":79, "nombrePais":"Honduras"},
+{"_id":80, "nombrePais":"Hungría"},
+{"_id":81, "nombrePais":"India"},
+{"_id":82, "nombrePais":"Indonesia"},
+{"_id":83, "nombrePais":"Irak"},
+{"_id":84, "nombrePais":"Irán"},
+{"_id":85, "nombrePais":"Irlanda"},
+{"_id":86, "nombrePais":"Islandia"},
+{"_id":87, "nombrePais":"Islas Marshall"},
+{"_id":88, "nombrePais":"Islas Salomón"},
+{"_id":89, "nombrePais":"Israel"},
+{"_id":90, "nombrePais":"Italia"},
+{"_id":91, "nombrePais":"Jamaica"},
+{"_id":92, "nombrePais":"Japón"},
+{"_id":93, "nombrePais":"Jordania"},
+{"_id":94, "nombrePais":"Kazajistán"},
+{"_id":95, "nombrePais":"Kenia"},
+{"_id":96, "nombrePais":"Kirguistán"},
+{"_id":97, "nombrePais":"Kiribati"},
+{"_id":98, "nombrePais":"Kuwait"},
+{"_id":99, "nombrePais":"Laos"},
+{"_id":100, "nombrePais":"Lesoto"},
+{"_id":101, "nombrePais":"Letonia"},
+{"_id":102, "nombrePais":"Líbano"},
+{"_id":103, "nombrePais":"Liberia"},
+{"_id":104, "nombrePais":"Libia"},
+{"_id":105, "nombrePais":"Liechtenstein"},
+{"_id":106, "nombrePais":"Lituania"},
+{"_id":107, "nombrePais":"Luxemburgo"},
+{"_id":108, "nombrePais":"Macedonia del Norte"},
+{"_id":109, "nombrePais":"Madagascar"},
+{"_id":110, "nombrePais":"Malasia"},
+{"_id":111, "nombrePais":"Malaui"},
+{"_id":112, "nombrePais":"Maldivas"},
+{"_id":113, "nombrePais":"Malí"},
+{"_id":114, "nombrePais":"Malta"},
+{"_id":115, "nombrePais":"Marruecos"},
+{"_id":116, "nombrePais":"Mauricio"},
+{"_id":117, "nombrePais":"Mauritania"},
+{"_id":118, "nombrePais":"México"},
+{"_id":119, "nombrePais":"Micronesia"},
+{"_id":120, "nombrePais":"Moldavia"},
+{"_id":121, "nombrePais":"Mónaco"},
+{"_id":122, "nombrePais":"Mongolia"},
+{"_id":123, "nombrePais":"Montenegro"},
+{"_id":124, "nombrePais":"Mozambique"},
+{"_id":125, "nombrePais":"Namibia"},
+{"_id":126, "nombrePais":"Nauru"},
+{"_id":127, "nombrePais":"Nepal"},
+{"_id":128, "nombrePais":"Nicaragua"},
+{"_id":129, "nombrePais":"Níger"},
+{"_id":130, "nombrePais":"Nigeria"},
+{"_id":131, "nombrePais":"Noruega"},
+{"_id":132, "nombrePais":"Nueva Zelanda"},
+{"_id":133, "nombrePais":"Omán"},
+{"_id":134, "nombrePais":"Países Bajos"},
+{"_id":135, "nombrePais":"Pakistán"},
+{"_id":136, "nombrePais":"Palaos"},
+{"_id":137, "nombrePais":"Panamá"},
+{"_id":138, "nombrePais":"Papúa Nueva Guinea"},
+{"_id":139, "nombrePais":"Paraguay"},
+{"_id":140, "nombrePais":"Perú"},
+{"_id":141, "nombrePais":"Polonia"},
+{"_id":142, "nombrePais":"Portugal"},
+{"_id":143, "nombrePais":"Reino Unido de Gran Bretaña e Irlanda del Norte"},
+{"_id":144, "nombrePais":"República Centroafricana"},
+{"_id":145, "nombrePais":"República Checa"},
+{"_id":146, "nombrePais":"República del Congo"},
+{"_id":147, "nombrePais":"República Democrática del Congo"},
+{"_id":148, "nombrePais":"República Dominicana"},
+{"_id":149, "nombrePais":"República Sudafricana"},
+{"_id":150, "nombrePais":"Ruanda"},
+{"_id":151, "nombrePais":"Rumanía"},
+{"_id":152, "nombrePais":"Rusia"},
+{"_id":153, "nombrePais":"Samoa"},
+{"_id":154, "nombrePais":"San Cristóbal y Nieves"},
+{"_id":155, "nombrePais":"San Marino"},
+{"_id":156, "nombrePais":"San Vicente y las Granadinas"},
+{"_id":157, "nombrePais":"Santa Lucía"},
+{"_id":158, "nombrePais":"Santo Tomé y Príncipe"},
+{"_id":159, "nombrePais":"Senegal"},
+{"_id":160, "nombrePais":"Serbia"},
+{"_id":161, "nombrePais":"Seychelles"},
+{"_id":162, "nombrePais":"Sierra Leona"},
+{"_id":163, "nombrePais":"Singapur"},
+{"_id":164, "nombrePais":"Siria"},
+{"_id":165, "nombrePais":"Somalia"},
+{"_id":166, "nombrePais":"Sri Lanka"},
+{"_id":167, "nombrePais":"Suazilandia"},
+{"_id":168, "nombrePais":"Sudán"},
+{"_id":169, "nombrePais":"Sudán del Sur"},
+{"_id":170, "nombrePais":"Suecia"},
+{"_id":171, "nombrePais":"Suiza"},
+{"_id":172, "nombrePais":"Surinam"},
+{"_id":173, "nombrePais":"Tailandia"},
+{"_id":174, "nombrePais":"Tanzania"},
+{"_id":175, "nombrePais":"Tayikistán"},
+{"_id":176, "nombrePais":"Timor Oriental"},
+{"_id":177, "nombrePais":"Togo"},
+{"_id":178, "nombrePais":"Tonga"},
+{"_id":179, "nombrePais":"Trinidad y Tobago"},
+{"_id":180, "nombrePais":"Túnez"},
+{"_id":181, "nombrePais":"Turkmenistán"},
+{"_id":182, "nombrePais":"Turquía"},
+{"_id":183, "nombrePais":"Tuvalu"},
+{"_id":184, "nombrePais":"Ucrania"},
+{"_id":185, "nombrePais":"Uganda"},
+{"_id":186, "nombrePais":"Uruguay"},
+{"_id":187, "nombrePais":"Uzbekistán"},
+{"_id":188, "nombrePais":"Vanuatu"},
+{"_id":189, "nombrePais":"Venezuela"},
+{"_id":190, "nombrePais":"Vietnam"},
+{"_id":191, "nombrePais":"Yemen"},
+{"_id":192, "nombrePais":"Yibuti"},
+{"_id":193, "nombrePais":"Zambia"},
+{"_id":194, "nombrePais":"Zimbabue"},
+{"_id":195, "nombrePais":"Zambia"},
+{"_id":196, "nombrePais":"Zimbabue"}])
+
+db.createCollection("categoria")
+db.categoria.insert([
+{"_id":1, "nombreCategoria":"Larges", "descripcion":"Se definen por el tipo de levadura usada durante la fermentación."},
+{"_id":2, "nombreCategoria":"Ales",  "descripcion":"Abarca a todas las cervezas de fermentación alta"}
+])
+
+db.createColletion("cerveza")
+db.cerveza.insert([
+{"_id":"1", "nombreCerveza":"Aguila tradicional", 
+ "pais":{"_id":42,"nombrePais":"Colombia"}, 
+ "categoria":{"_id":1},
+ "precio":13.4},
+{"_id":"2", "nombreCerveza":"Aguila Light", 
+ "pais":{"_id":42,"nombrePais":"Colombia"}, 
+ "categoria":{"_id":2},
+ "precio":12.5},
+{"_id":"3", "nombreCerveza":"Poker", 
+ "pais":{"_id":42,"nombrePais":"Colombia"}, 
+ "categoria":{"_id":1},
+ "precio":13.4},
+{"_id":"4", "nombreCerveza":"Leona", 
+ "pais":{"_id":42,"nombrePais":"Colombia"}, 
+ "categoria":{"_id":2},
+ "precio":12.5},
+{"_id":"5", "nombreCerveza":"Heinecken", 
+ "pais":{"_id":3,"nombrePais":"Alemania"}, 
+ "categoria":{"_id":2},
+ "precio":12.5}
+])
+
+/**********  En construcción    **************/
+create table cerveza (
+  id_cerveza smallint,
+  nombre_cerveza varchar (50),
+  id_pais smallint,
+  precio mediumint,
+   primary key  (id_cerveza),
+   foreign key  (id_pais) references pais (id_pais) 
+);
+
+
+
+
+create table tipoCategoria  (
+  id_tipocategoria tinyint,
+  nombretipocategoria varchar (20),
+  descripcion varchar(200),
+  primary key  (id_tipocategoria)
+);
+
+create table categoria  (
+  id_categoria smallint,
+  nombrecategoria varchar (50),
+  descripcion varchar (200),
+  primary key  (id_categoria)
+  
+);
+
+
+
+create table categoria_tipocategoria  (
+  id_categoria smallint,
+  id_tipocategoria tinyint,
+  foreign key  (id_categoria) references categoria (id_categoria),
+  foreign key  (id_tipocategoria) references tipocategoria (id_tipocategoria)
+
+);
+
+
+create table materiaprima  (
+   id_componente smallint,
+   nombrecomponente varchar (100),
+   cantidadcomponente varchar (100),
+   primary key (id_componente)
+);
+
+create table tipocomponente (
+  id_tipocomponente smallint,
+  nombretipocomponente varchar (50),
+  medida  varchar (50),
+  primary key (id_tipocomponente)
+);
+
+
+create table materiaprima_tipocomponente (
+  id_componente smallint,
+  id_tipocomponente smallint,
+  foreign key (id_componente) references materiaprima (id_componente),
+  foreign key (id_tipocomponente) references tipocomponente (id_tipocomponente)
+);
+
+create table cerveza_materiaprima (
+  id_componente smallint,
+  id_cerveza smallint,
+  foreign key  (id_cerveza) references cerveza (id_cerveza),
+  foreign key  (id_componente) references materiaprima (id_componente)
+);
+
+create table cerveza_categoria (
+  id_cerveza smallint,
+  id_categoria smallint,
+  foreign key  (id_cerveza) references cerveza (id_cerveza),
+  foreign key (id_categoria) references categoria (id_categoria)
+);
+
+
+  */*/*/*/*/*/*/*/*/    Insertar datos */*/*/*/*/*/*/*
+
+
+insert into tipocategoria values  (1,'Dark','Cerveza oscura dulce');
+insert into tipocategoria values  (2,'Pale','Cerveza bien clara y espumosa');
+insert into tipocategoria values  (3,'Backs','Cerveza agridulce fuerte');
+insert into tipocategoria values  (4,'Stouts','Cerveza a base de malta menos fuerte que la porter');
+insert into tipocategoria values  (5,'Porters','Cerveza a base de malta muy fuerte ');
+insert into tipocategoria values  (6,'Belgians','Cerveza mixta trigo y especies cítricas');
+insert into tipocategoria values  (7,'Sours','Cerveza de sabor ácido');
+
+
+insert into categoria_tipocategoria values  (1,1);
+insert into categoria_tipocategoria values  (1,2);
+insert into categoria_tipocategoria values  (1,3);
+insert into categoria_tipocategoria values  (2,2);
+insert into categoria_tipocategoria values  (2,4);
+insert into categoria_tipocategoria values  (2,5);
+insert into categoria_tipocategoria values  (2,6);
+insert into categoria_tipocategoria values  (2,7);
+
+/*   comentario de los ingredientes */
+1, Agua el ingrediente más presente
+2, Malta la esencia de la cerveza
+3, Lúpulo primo hermano de la marihuana
+4, Levadura la verdadera artífice de la cerveza
+5, Cereales sin maltear
+6, Casi cualquier ingrediente que se te pueda ocurrir
+/* /*/*/*/*/*//**/  
+
+
+insert into materiaprima values(1,'Agua',300);
+insert into materiaprima values(2,'Malta',15);
+insert into materiaprima values(3,'Lúpulo',15);
+insert into materiaprima values(4,'Levadura',10);
+insert into materiaprima values(5,'Cereales',10);
+insert into materiaprima values(6,'Agua destilada', 250);
+insert into materiaprima values(7,'Malta de trigo',50);
+insert into materiaprima values(8,'Malta de cebeda', 50);
+insert into materiaprima values(9,'Malta de cereal', 50);
+
+
+insert into tipocomponente values (1,'Agua', 'ml');
+insert into tipocomponente values (2,'Malta','ml');
+insert into tipocomponente values (3,'Lúpulo','ml');
+insert into tipocomponente values (4,'Levadura','gr');
+insert into tipocomponente values (5,'Cereal', 'gr');
+
+
+insert into materiaprima_tipocomponente values (1,1);
+insert into materiaprima_tipocomponente values (2,2);
+insert into materiaprima_tipocomponente values (3,3);
+insert into materiaprima_tipocomponente values (4,4);
+insert into materiaprima_tipocomponente values (5,5);
+insert into materiaprima_tipocomponente values (6,1);
+insert into materiaprima_tipocomponente values (7,2);
+insert into materiaprima_tipocomponente values (8,2);
+insert into materiaprima_tipocomponente values (9,2);
+
+
+
+
+insert into cerveza_materiaprima values (1,1);
+insert into cerveza_materiaprima values (1,2);
+insert into cerveza_materiaprima values (1,3);
+insert into cerveza_materiaprima values (1,4);
+insert into cerveza_materiaprima values (1,5);
+

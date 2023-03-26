@@ -298,23 +298,27 @@ insert into categoria_tipocategoria values  (2,5);
 insert into categoria_tipocategoria values  (2,6);
 insert into categoria_tipocategoria values  (2,7);
 
+/*    comentario de los ingredientes   */
+/*
 
 1, Agua el ingrediente más presente
 2, Malta la esencia de la cerveza
 3, Lúpulo primo hermano de la marihuana
 4, Levadura la verdadera artífice de la cerveza
 5, Cereales sin maltear
-6, Casi cualquier ingrediente que se te pueda ocurrir
+6, Casi cualquier ingrediente que se te pueda ocurrir    
 
-insert into	materiaprima values(1,'Agua',300);
-insert into	materiaprima values(2,'Malta',15);
-insert into	materiaprima values(3,'Lúpulo',15);
-insert into	materiaprima values(4,'Levadura',10);
-insert into	materiaprima values(5,'Cereales',10);
-insert into	materiaprima values(6,'Agua destilada', 250);
-insert into	materiaprima values(7,'Malta de trigo',50);
-insert into	materiaprima values(8,'Malta de cebeda', 50);
-insert into	materiaprima values(9,'Malta de cereal', 50);
+*/
+
+insert into materiaprima values(1,'Agua',300);
+insert into materiaprima values(2,'Malta',15);
+insert into materiaprima values(3,'Lúpulo',15);
+insert into materiaprima values(4,'Levadura',10);
+insert into materiaprima values(5,'Cereales',10);
+insert into materiaprima values(6,'Agua destilada', 250);
+insert into materiaprima values(7,'Malta de trigo',50);
+insert into materiaprima values(8,'Malta de cebeda', 50);
+insert into materiaprima values(9,'Malta de cereal', 50);
 
 
 insert into tipocomponente values (1,'Agua', 'ml');
