@@ -203,171 +203,88 @@ db.categoria.insert([
 {"_id":2, "nombreCategoria":"Ales",  "descripcion":"Abarca a todas las cervezas de fermentación alta"}
 ])
 
-db.createColletion("cerveza")
-db.cerveza.insert([
-{"_id":"1", "nombreCerveza":"Aguila tradicional", 
+db.createCollection("cerveza")
+db.cerveza.insert(
+{"_id":1, "nombreCerveza":"Aguila tradicional", 
  "pais":{"_id":42,"nombrePais":"Colombia"}, 
  "categoria":{"_id":1},
- "precio":13.4},
-{"_id":"2", "nombreCerveza":"Aguila Light", 
+ "precio":13.4,
+ "componentes":[
+{"_id":1, "nombreMateriaPrima":"Agua", "medida":"ml","cantidad":300},
+{"_id":2, "nombreMateriaPrima":"Malta", "medida":"ml","cantidad":15},
+{"_id":3, "nombreMateriaPrima":"Lúpulo", "medida":"ml","cantidad":15},
+{"_id":4, "nombreMateriaPrima":"Levadura", "medida":"gr","cantidad":10},
+{"_id":5, "nombreMateriaPrima":"Cereales", "medida":"gr","cantidad":10}]
+})
+
+db.cerveza.insert(
+{"_id":2, "nombreCerveza":"Aguila Light", 
  "pais":{"_id":42,"nombrePais":"Colombia"}, 
  "categoria":{"_id":2},
- "precio":12.5},
-{"_id":"3", "nombreCerveza":"Poker", 
+ "precio":12.5,
+"componentes":[
+{"_id":1, "nombreMateriaPrima":"Agua", "medida":"ml","cantidad":300},
+{"_id":3, "nombreMateriaPrima":"Lúpulo", "medida":"ml","cantidad":15},
+{"_id":4, "nombreMateriaPrima":"Levadura", "medida":"gr","cantidad":10},
+{"_id":5, "nombreMateriaPrima":"Cereales", "medida":"gr","cantidad":10},
+{"_id":6, "nombreMateriaPrima":"Agua destiladas", "medida":"ml","cantidad":15},
+{"_id":7, "nombreMateriaPrima":"Malta de trigo", "medida":"ml","cantidad":15}]
+})
+
+db.cerveza.insert(
+{"_id":3, "nombreCerveza":"Poker", 
  "pais":{"_id":42,"nombrePais":"Colombia"}, 
  "categoria":{"_id":1},
- "precio":13.4},
-{"_id":"4", "nombreCerveza":"Leona", 
+ "precio":13.4,
+"componentes":[
+{"_id":1, "nombreMateriaPrima":"Agua", "medida":"ml","cantidad":300},
+{"_id":3, "nombreMateriaPrima":"Lúpulo", "medida":"ml","cantidad":15},
+{"_id":4, "nombreMateriaPrima":"Levadura", "medida":"gr","cantidad":10},
+{"_id":5, "nombreMateriaPrima":"Cereales", "medida":"gr","cantidad":10},
+{"_id":6, "nombreMateriaPrima":"Agua destiladas", "medida":"ml","cantidad":10},
+{"_id":8, "nombreMateriaPrima":"Malta de cereal", "medida":"ml","cantidad":25}]
+})
+
+db.cerveza.insert(
+{"_id":4, "nombreCerveza":"Leona", 
  "pais":{"_id":42,"nombrePais":"Colombia"}, 
  "categoria":{"_id":2},
- "precio":12.5},
-{"_id":"5", "nombreCerveza":"Heinecken", 
+ "precio":12.5,
+"componentes":[
+{"_id":1, "nombreMateriaPrima":"Agua", "medida":"ml","cantidad":300},
+{"_id":2, "nombreMateriaPrima":"Malta", "medida":"ml","cantidad":15},
+{"_id":3, "nombreMateriaPrima":"Lúpulo", "medida":"ml","cantidad":15},
+{"_id":4, "nombreMateriaPrima":"Levadura", "medida":"gr","cantidad":10},
+{"_id":5, "nombreMateriaPrima":"Cereales", "medida":"gr","cantidad":10},
+{"_id":6, "nombreMateriaPrima":"Agua destiladas", "medida":"ml","cantidad":50}]
+})
+
+db.cerveza.insert(
+{"_id":5, "nombreCerveza":"Heinecken", 
  "pais":{"_id":3,"nombrePais":"Alemania"}, 
  "categoria":{"_id":2},
- "precio":12.5}
+ "precio":12.5,
+"componentes":[
+{"_id":1, "nombreMateriaPrima":"Agua", "medida":"ml","cantidad":300},
+{"_id":2, "nombreMateriaPrima":"Malta", "medida":"ml","cantidad":15},
+{"_id":3, "nombreMateriaPrima":"Lúpulo", "medida":"ml","cantidad":15},
+{"_id":4, "nombreMateriaPrima":"Levadura", "medida":"gr","cantidad":10},
+{"_id":5, "nombreMateriaPrima":"Cereales", "medida":"gr","cantidad":10},
+{"_id":6, "nombreMateriaPrima":"Agua destiladas", "medida":"ml","cantidad":50},
+{"_id":8, "nombreMateriaPrima":"Malta de cereal", "medida":"ml","cantidad":25}]
+})
+
+db.createCollection("materiaPrima")
+db.materiaPrima.insert([
+{"_id":"1", "nombreMateriaPrima":"Agua", "medida":"ml","existencia": 1000000},
+{"_id":"2", "nombreMateriaPrima":"Malta", "medida":"ml","existencia": 100000},
+{"_id":"3", "nombreMateriaPrima":"Lúpulo", "medida":"ml","existencia": 50000},
+{"_id":"4", "nombreMateriaPrima":"Levadura", "medida":"gr","existencia": 100000},
+{"_id":"5", "nombreMateriaPrima":"Cereales", "medida":"gr","existencia": 500000},
+{"_id":"6", "nombreMateriaPrima":"Agua destiladas", "medida":"ml","existencia": 500000},
+{"_id":"7", "nombreMateriaPrima":"Malta de trigo", "medida":"ml","existencia": 300000},
+{"_id":"8", "nombreMateriaPrima":"Malta de cereal", "medida":"ml","existencia": 250000}
 ])
 
-/**********  En construcción    **************/
-create table cerveza (
-  id_cerveza smallint,
-  nombre_cerveza varchar (50),
-  id_pais smallint,
-  precio mediumint,
-   primary key  (id_cerveza),
-   foreign key  (id_pais) references pais (id_pais) 
-);
 
-
-
-
-create table tipoCategoria  (
-  id_tipocategoria tinyint,
-  nombretipocategoria varchar (20),
-  descripcion varchar(200),
-  primary key  (id_tipocategoria)
-);
-
-create table categoria  (
-  id_categoria smallint,
-  nombrecategoria varchar (50),
-  descripcion varchar (200),
-  primary key  (id_categoria)
-  
-);
-
-
-
-create table categoria_tipocategoria  (
-  id_categoria smallint,
-  id_tipocategoria tinyint,
-  foreign key  (id_categoria) references categoria (id_categoria),
-  foreign key  (id_tipocategoria) references tipocategoria (id_tipocategoria)
-
-);
-
-
-create table materiaprima  (
-   id_componente smallint,
-   nombrecomponente varchar (100),
-   cantidadcomponente varchar (100),
-   primary key (id_componente)
-);
-
-create table tipocomponente (
-  id_tipocomponente smallint,
-  nombretipocomponente varchar (50),
-  medida  varchar (50),
-  primary key (id_tipocomponente)
-);
-
-
-create table materiaprima_tipocomponente (
-  id_componente smallint,
-  id_tipocomponente smallint,
-  foreign key (id_componente) references materiaprima (id_componente),
-  foreign key (id_tipocomponente) references tipocomponente (id_tipocomponente)
-);
-
-create table cerveza_materiaprima (
-  id_componente smallint,
-  id_cerveza smallint,
-  foreign key  (id_cerveza) references cerveza (id_cerveza),
-  foreign key  (id_componente) references materiaprima (id_componente)
-);
-
-create table cerveza_categoria (
-  id_cerveza smallint,
-  id_categoria smallint,
-  foreign key  (id_cerveza) references cerveza (id_cerveza),
-  foreign key (id_categoria) references categoria (id_categoria)
-);
-
-
-  */*/*/*/*/*/*/*/*/    Insertar datos */*/*/*/*/*/*/*
-
-
-insert into tipocategoria values  (1,'Dark','Cerveza oscura dulce');
-insert into tipocategoria values  (2,'Pale','Cerveza bien clara y espumosa');
-insert into tipocategoria values  (3,'Backs','Cerveza agridulce fuerte');
-insert into tipocategoria values  (4,'Stouts','Cerveza a base de malta menos fuerte que la porter');
-insert into tipocategoria values  (5,'Porters','Cerveza a base de malta muy fuerte ');
-insert into tipocategoria values  (6,'Belgians','Cerveza mixta trigo y especies cítricas');
-insert into tipocategoria values  (7,'Sours','Cerveza de sabor ácido');
-
-
-insert into categoria_tipocategoria values  (1,1);
-insert into categoria_tipocategoria values  (1,2);
-insert into categoria_tipocategoria values  (1,3);
-insert into categoria_tipocategoria values  (2,2);
-insert into categoria_tipocategoria values  (2,4);
-insert into categoria_tipocategoria values  (2,5);
-insert into categoria_tipocategoria values  (2,6);
-insert into categoria_tipocategoria values  (2,7);
-
-/*   comentario de los ingredientes */
-1, Agua el ingrediente más presente
-2, Malta la esencia de la cerveza
-3, Lúpulo primo hermano de la marihuana
-4, Levadura la verdadera artífice de la cerveza
-5, Cereales sin maltear
-6, Casi cualquier ingrediente que se te pueda ocurrir
-/* /*/*/*/*/*//**/  
-
-
-insert into materiaprima values(1,'Agua',300);
-insert into materiaprima values(2,'Malta',15);
-insert into materiaprima values(3,'Lúpulo',15);
-insert into materiaprima values(4,'Levadura',10);
-insert into materiaprima values(5,'Cereales',10);
-insert into materiaprima values(6,'Agua destilada', 250);
-insert into materiaprima values(7,'Malta de trigo',50);
-insert into materiaprima values(8,'Malta de cebeda', 50);
-insert into materiaprima values(9,'Malta de cereal', 50);
-
-
-insert into tipocomponente values (1,'Agua', 'ml');
-insert into tipocomponente values (2,'Malta','ml');
-insert into tipocomponente values (3,'Lúpulo','ml');
-insert into tipocomponente values (4,'Levadura','gr');
-insert into tipocomponente values (5,'Cereal', 'gr');
-
-
-insert into materiaprima_tipocomponente values (1,1);
-insert into materiaprima_tipocomponente values (2,2);
-insert into materiaprima_tipocomponente values (3,3);
-insert into materiaprima_tipocomponente values (4,4);
-insert into materiaprima_tipocomponente values (5,5);
-insert into materiaprima_tipocomponente values (6,1);
-insert into materiaprima_tipocomponente values (7,2);
-insert into materiaprima_tipocomponente values (8,2);
-insert into materiaprima_tipocomponente values (9,2);
-
-
-
-
-insert into cerveza_materiaprima values (1,1);
-insert into cerveza_materiaprima values (1,2);
-insert into cerveza_materiaprima values (1,3);
-insert into cerveza_materiaprima values (1,4);
-insert into cerveza_materiaprima values (1,5);
 
