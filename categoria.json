@@ -1,0 +1,16 @@
+[{
+  "_id": 1,
+  "nombreCategoria": "Larges",
+  "descripcion": "Se definen por el tipo de levadura usada durante la fermentación.",
+  "precio": 13.4
+},{
+  "_id": 2,
+  "nombreCategoria": "Ales",
+  "descripcion": "Abarca a todas las cervezas de fermentación alta",
+  "precio": 12.5
+},{
+  "_id": 3,
+  "nombreCategoria": "LaRubia",
+  "descripcion": "Cerveza rubia de alta calidad y bajo precio",
+  "precio": 14
+}]

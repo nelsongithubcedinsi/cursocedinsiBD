@@ -1,0 +1,41 @@
+[{
+  "_id": "1",
+  "nombreMateriaPrima": "Agua",
+  "medida": "ml",
+  "existencia": 1000000
+},{
+  "_id": "2",
+  "nombreMateriaPrima": "Malta",
+  "medida": "ml",
+  "existencia": 100000
+},{
+  "_id": "3",
+  "nombreMateriaPrima": "Lúpulo",
+  "medida": "ml",
+  "existencia": 50000
+},{
+  "_id": "4",
+  "nombreMateriaPrima": "Levadura",
+  "medida": "gr",
+  "existencia": 100000
+},{
+  "_id": "5",
+  "nombreMateriaPrima": "Cereales",
+  "medida": "gr",
+  "existencia": 500000
+},{
+  "_id": "6",
+  "nombreMateriaPrima": "Agua destiladas",
+  "medida": "ml",
+  "existencia": 500000
+},{
+  "_id": "7",
+  "nombreMateriaPrima": "Malta de trigo",
+  "medida": "ml",
+  "existencia": 300000
+},{
+  "_id": "8",
+  "nombreMateriaPrima": "Malta de cereal",
+  "medida": "ml",
+  "existencia": 250000
+}]

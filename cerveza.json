@@ -1,0 +1,246 @@
+[{
+  "_id": 1,
+  "nombreCerveza": "Aguila tradicional",
+  "pais": {
+    "_id": 42,
+    "nombrePais": "Colombia"
+  },
+  "categoria": {
+    "_id": 1
+  },
+  "precio": 13.4,
+  "componentes": [
+    {
+      "_id": 1,
+      "nombreMateriaPrima": "Agua",
+      "medida": "ml",
+      "cantidad": 300
+    },
+    {
+      "_id": 2,
+      "nombreMateriaPrima": "Malta",
+      "medida": "ml",
+      "cantidad": 15
+    },
+    {
+      "_id": 3,
+      "nombreMateriaPrima": "Lúpulo",
+      "medida": "ml",
+      "cantidad": 15
+    },
+    {
+      "_id": 4,
+      "nombreMateriaPrima": "Levadura",
+      "medida": "gr",
+      "cantidad": 10
+    },
+    {
+      "_id": 5,
+      "nombreMateriaPrima": "Cereales",
+      "medida": "gr",
+      "cantidad": 10
+    }
+  ]
+},{
+  "_id": 2,
+  "nombreCerveza": "Aguila Light",
+  "pais": {
+    "_id": 42,
+    "nombrePais": "Colombia"
+  },
+  "categoria": {
+    "_id": 2
+  },
+  "precio": 12.5,
+  "componentes": [
+    {
+      "_id": 1,
+      "nombreMateriaPrima": "Agua",
+      "medida": "ml",
+      "cantidad": 300
+    },
+    {
+      "_id": 3,
+      "nombreMateriaPrima": "Lúpulo",
+      "medida": "ml",
+      "cantidad": 15
+    },
+    {
+      "_id": 4,
+      "nombreMateriaPrima": "Levadura",
+      "medida": "gr",
+      "cantidad": 10
+    },
+    {
+      "_id": 5,
+      "nombreMateriaPrima": "Cereales",
+      "medida": "gr",
+      "cantidad": 10
+    },
+    {
+      "_id": 6,
+      "nombreMateriaPrima": "Agua destiladas",
+      "medida": "ml",
+      "cantidad": 15
+    },
+    {
+      "_id": 7,
+      "nombreMateriaPrima": "Malta de trigo",
+      "medida": "ml",
+      "cantidad": 15
+    }
+  ]
+},{
+  "_id": 3,
+  "nombreCerveza": "Poker",
+  "pais": {
+    "_id": 42,
+    "nombrePais": "Colombia"
+  },
+  "categoria": {
+    "_id": 1
+  },
+  "precio": 13.4,
+  "componentes": [
+    {
+      "_id": 1,
+      "nombreMateriaPrima": "Agua",
+      "medida": "ml",
+      "cantidad": 300
+    },
+    {
+      "_id": 3,
+      "nombreMateriaPrima": "Lúpulo",
+      "medida": "ml",
+      "cantidad": 15
+    },
+    {
+      "_id": 4,
+      "nombreMateriaPrima": "Levadura",
+      "medida": "gr",
+      "cantidad": 10
+    },
+    {
+      "_id": 5,
+      "nombreMateriaPrima": "Cereales",
+      "medida": "gr",
+      "cantidad": 10
+    },
+    {
+      "_id": 6,
+      "nombreMateriaPrima": "Agua destiladas",
+      "medida": "ml",
+      "cantidad": 10
+    },
+    {
+      "_id": 8,
+      "nombreMateriaPrima": "Malta de cereal",
+      "medida": "ml",
+      "cantidad": 25
+    }
+  ]
+},{
+  "_id": 4,
+  "nombreCerveza": "Leona",
+  "pais": {
+    "_id": 42,
+    "nombrePais": "Colombia"
+  },
+  "categoria": {
+    "_id": 2
+  },
+  "precio": 12.5,
+  "componentes": [
+    {
+      "_id": 1,
+      "nombreMateriaPrima": "Agua",
+      "medida": "ml",
+      "cantidad": 300
+    },
+    {
+      "_id": 2,
+      "nombreMateriaPrima": "Malta",
+      "medida": "ml",
+      "cantidad": 15
+    },
+    {
+      "_id": 3,
+      "nombreMateriaPrima": "Lúpulo",
+      "medida": "ml",
+      "cantidad": 15
+    },
+    {
+      "_id": 4,
+      "nombreMateriaPrima": "Levadura",
+      "medida": "gr",
+      "cantidad": 10
+    },
+    {
+      "_id": 5,
+      "nombreMateriaPrima": "Cereales",
+      "medida": "gr",
+      "cantidad": 10
+    },
+    {
+      "_id": 6,
+      "nombreMateriaPrima": "Agua destiladas",
+      "medida": "ml",
+      "cantidad": 50
+    }
+  ]
+},{
+  "_id": 5,
+  "nombreCerveza": "Heinecken",
+  "pais": {
+    "_id": 3,
+    "nombrePais": "Alemania"
+  },
+  "categoria": {
+    "_id": 2
+  },
+  "precio": 12.5,
+  "componentes": [
+    {
+      "_id": 1,
+      "nombreMateriaPrima": "Agua",
+      "medida": "ml",
+      "cantidad": 300
+    },
+    {
+      "_id": 2,
+      "nombreMateriaPrima": "Malta",
+      "medida": "ml",
+      "cantidad": 15
+    },
+    {
+      "_id": 3,
+      "nombreMateriaPrima": "Lúpulo",
+      "medida": "ml",
+      "cantidad": 15
+    },
+    {
+      "_id": 4,
+      "nombreMateriaPrima": "Levadura",
+      "medida": "gr",
+      "cantidad": 10
+    },
+    {
+      "_id": 5,
+      "nombreMateriaPrima": "Cereales",
+      "medida": "gr",
+      "cantidad": 10
+    },
+    {
+      "_id": 6,
+      "nombreMateriaPrima": "Agua destiladas",
+      "medida": "ml",
+      "cantidad": 50
+    },
+    {
+      "_id": 8,
+      "nombreMateriaPrima": "Malta de cereal",
+      "medida": "ml",
+      "cantidad": 25
+    }
+  ]
+}]

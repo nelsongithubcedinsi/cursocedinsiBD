@@ -287,4 +287,13 @@ db.materiaPrima.insert([
 ])
 
 
+/******** consultas *******/
+
+db.pais.find().pretty()
+db.pais.find({nombrePais:"Colombia"})
+db.cerveza.find().pretty()
+db.cerveza.find({nombreCerveza:"Poker"})
+db.cerveza.find({precio:13.4}).pretty()
+db.cerveza.find({precio:12.5}).pretty()
+db.cerveza.find({nombreCerveza:"Aguila Light"}).pretty()
 
